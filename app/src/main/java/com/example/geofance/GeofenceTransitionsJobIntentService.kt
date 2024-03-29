@@ -38,6 +38,7 @@ class GeofenceTransitionsJobIntentService : JobIntentService() {
     }
 
     companion object {
+
         private const val LOG_TAG = "GeoTrIntentService"
         private const val JOB_ID = 573
 
