@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search_something"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtView22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:text="@string/search_something"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <SearchView
+        android:id="@+id/searchView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+
+    <EditText
+        android:id="@+id/input_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        android:padding="12dp"
+        android:textColor="@color/black" />
+
+    <com.github.pavlospt.CircleView
+        android:id="@+id/circular_display"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        app:cv_titleText="title"
+        app:cv_titleSize="24dp"
+        app:cv_subtitleSize="14dp"
+        app:cv_titleColor="@color/colorAccent"
+        app:cv_subtitleColor="@color/white"
+        app:cv_strokeColorValue="@color/colorPrimaryDark"
+        app:cv_backgroundColorValue="@color/black"
+        app:cv_fillColor="@color/colorPrimary"
+        app:cv_fillRadius="0.9"
+        app:cv_strokeWidthSize="5"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/download_button" />
+
+    <Button
+        android:id="@+id/download_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_url"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:padding="18dp"
+        android:text="download_now" />
+
+
+</RelativeLayout>

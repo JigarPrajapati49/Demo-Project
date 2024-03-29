@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name="com.example.DemoProjectApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DemoProject"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".ActivityBilling"
+            android:exported="true" >
+
+        </activity>
+
+        <activity
+            android:name=".ActivityCustomRadius"
+            android:exported="false" />
+        <activity
+            android:name=".Map2"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".Map2Activitity"
+            android:exported="true" />
+        <activity
+            android:name=".AcitivityNewReminder"
+            android:exported="false" />
+
+        <receiver
+            android:name=".GeofenceBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".GeofancMapActivity"
+            android:exported="true" />
+        <activity
+            android:name=".GeofenceActivity"
+            android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".KtorTestActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SuggestionSearchActivitiy"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".SavedActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MovieListActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.ui.MapActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ui.MainActivity"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.example.geofance.GeofenceBroadcastReceivers"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name="com.example.geofance.GeofenceTransitionsJobIntentService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <provider
+            android:name=".SimpleSearchSuggestionsProvider"
+            android:authorities="com.example.demoproject.SimpleSearchSuggestionsProvider" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCiSh4VnnI1jemtZTytDoj2X7Wl6evey30" />
+    </application>
+
+</manifest>
