@@ -33,6 +33,7 @@ class GeofenceTransitionsJobIntentService : JobIntentService() {
     }
 
     private fun getFirstReminder(triggeringGeofences: List<Geofence>): Reminder? {
+        // comment
         val firstGeofence = triggeringGeofences[0]
         return (application as DemoProjectApplication).getRepository().get(firstGeofence.requestId)
     }
